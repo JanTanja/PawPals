@@ -4,10 +4,11 @@ import Social from './Social.astro';
 export interface Props {
 	subtitle: string;
 	title: string;
-	tagline: string;
+	location: string;
+    breed: string;
 }
 
-const { subtitle, title, tagline } = Astro.props;
+const { subtitle, title, location, breed } = Astro.props;
 const socials = await Astro.glob("./../pages/socials/*.md");
 ---
 
@@ -15,7 +16,7 @@ const socials = await Astro.glob("./../pages/socials/*.md");
     <div class="mx-auto max-w-7xl py-16 px-4 sm:py-10 sm:px-6 lg:px-8">
         <div class="text-center">
 
-            <img class="mx-auto h-40 w-40 rounded-full xl:h-56 xl:w-56" src="avatar.png" alt="">
+            <img class="mx-auto h-40 w-40 rounded-full xl:h-56 xl:w-56" src="kilo.png" alt="">
             
             <p class="mt-5 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
                 {title}
@@ -26,12 +27,20 @@ const socials = await Astro.glob("./../pages/socials/*.md");
             </h2>
 
             <p class="mx-auto mt-5 max-w-xl text-xl text-gray-500">
-                {tagline}
+                {breed}
             </p>
+            
+            <p class="mx-auto mt-5 max-w-xl text-xl text-gray-500">
+                {location}
+            </p>
+
+
         
-            <Social
+            <!-- 
+                
+                <Social
                 socials={socials}
-            />
+            /> -->
         </div>
     </div>
 </div>

@@ -1,5 +1,5 @@
 ---
-title: Twitter
-emoji: 🐦
+title: Instagram
+emoji: 📸
 href: https://twitter.com/yOyO38
 ---
